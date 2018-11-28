@@ -9,10 +9,10 @@
 import UIKit
 
 class Machine: NSObject {
-    var products = Dictionary<Ingridient,Int>()
-    var cookBook = Dictionary<Drink,Dictionary<Ingridient,Int>>()
+    private var products = Dictionary<Ingridient,Int>()
+    private var cookBook = Dictionary<Drink,Dictionary<Ingridient,Int>>()
     
-    private func fillCookBooks(){
+    private func fillMachineCookBooks(){
         var coffeIngrifdients  = Dictionary<Ingridient,Int>()
         coffeIngrifdients[.cofeeBobs] = 10
         coffeIngrifdients[.sugar] = 10
@@ -35,12 +35,13 @@ class Machine: NSObject {
     
     override init() {
         super.init()
-        fillCookBooks()
+        fillMachineCookBooks()
     }
     
-    func addToMachine(ingridient : Ingridient, count :Int){
+    func addToMachine(ingridient : Ingridient, count :Int) -> String {
         let oldVal = products[ingridient] ?? 0
         products[ingridient] =  oldVal + count
+        return "В аппарате \(products[ingridient]!) грамов \(ingridient.toString())"
     }
     
     func makeDrink(drink : Drink) -> String {
@@ -50,19 +51,19 @@ class Machine: NSObject {
             for (ingridient,ingridientNeedCount) in ingridients {
                 let productCount = products[ingridient] ?? 0
                 if (productCount<ingridientNeedCount){
-                    return "Мы не можем приготовить \(drink) не хватает \(ingridient)"
+                    return "Не можем приготовить \(drink.toString()) нет \(ingridient.toString())"
                 }
             }
             
             // make the drink
             for (ingridient,ingridientNeedCount) in ingridients {
                     let productCount = products[ingridient]!
-                products[ingridient] = productCount + ingridientNeedCount
+                products[ingridient] = productCount - ingridientNeedCount
                 }
             
-            return "Напиток \(drink) готов"
+            return "Напиток \(drink.toString()) готов"
         } else {
-            return "Этот аппарат не умеет готовить \(drink)"
+            return "Этот аппарат не умеет готовить \(drink.toString())"
         }
         
     }

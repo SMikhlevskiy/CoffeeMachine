@@ -8,8 +8,16 @@
 
 import UIKit
 
-enum Drink : String {
-    case esspresso = "Эспрессо"
-    case americano = "Американо"
-    case capuchino = "Капучино"
+enum Drink : Int {
+    case esspresso = 1
+    case americano = 2
+    case capuchino = 3
+    
+    func toString() -> String{
+        switch (self) {
+            case .esspresso: return "Эспрессо"
+            case .americano: return "Американо"
+            case .capuchino: return "Капучино"
+        }
+    }
 }

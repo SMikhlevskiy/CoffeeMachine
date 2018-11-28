@@ -19,9 +19,18 @@ class ViewController: UIViewController {
         // start work
     }
 
+    
     @IBAction func makeDrink(_ sender: UIButton) {
+        if let value = Drink.init(rawValue: sender.tag){
+            messageScreen.text = machine.makeDrink(drink: value)
+        }
     }
     
+    @IBAction func addProduct(_ sender: UIButton) {
+        if let value = Ingridient.init(rawValue: sender.tag){
+            messageScreen.text = machine.addToMachine(ingridient: value, count: 200)
+        }
+    }
     
     
 }

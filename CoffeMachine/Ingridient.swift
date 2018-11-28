@@ -8,9 +8,18 @@
 
 import UIKit
 
-enum Ingridient : String {
-case water = "Вода"
-case milk = "Молоко"
-case cofeeBobs = "Кофейные зерна"
-case sugar = "Сахар"
+enum Ingridient : Int {
+case water = 1
+case milk = 2
+case cofeeBobs = 3
+case sugar = 4
+    
+    func toString() -> String {
+        switch self {
+            case .water: return "Вода"
+            case .milk: return "Молоко"
+            case .cofeeBobs: return  "Кофейные зерна"
+            case .sugar: return "Сахар"
+        }
+    }
 }
