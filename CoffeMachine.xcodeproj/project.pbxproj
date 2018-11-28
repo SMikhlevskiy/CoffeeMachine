@@ -12,6 +12,9 @@
 		5A33967421AEB90300BF6475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A33967221AEB90300BF6475 /* Main.storyboard */; };
 		5A33967621AEB90600BF6475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A33967521AEB90600BF6475 /* Assets.xcassets */; };
 		5A33967921AEB90600BF6475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A33967721AEB90600BF6475 /* LaunchScreen.storyboard */; };
+		5A33968121AEBB4A00BF6475 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33968021AEBB4A00BF6475 /* Machine.swift */; };
+		5A33968321AEC09300BF6475 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33968221AEC09300BF6475 /* Drink.swift */; };
+		5A33968521AEC0C000BF6475 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33968421AEC0C000BF6475 /* Ingridient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		5A33967521AEB90600BF6475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A33967821AEB90600BF6475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A33967A21AEB90600BF6475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A33968021AEBB4A00BF6475 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		5A33968221AEC09300BF6475 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		5A33968421AEC0C000BF6475 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				5A33966E21AEB90300BF6475 /* AppDelegate.swift */,
+				5A33968021AEBB4A00BF6475 /* Machine.swift */,
+				5A33968221AEC09300BF6475 /* Drink.swift */,
+				5A33968421AEC0C000BF6475 /* Ingridient.swift */,
 				5A33967021AEB90300BF6475 /* ViewController.swift */,
 				5A33967221AEB90300BF6475 /* Main.storyboard */,
 				5A33967521AEB90600BF6475 /* Assets.xcassets */,
@@ -90,6 +99,12 @@
 		5A33966321AEB90300BF6475 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					asd,
+					"Эспрессо",
+					"ввывы",
+					"эспрессо",
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Mobiwolf;
@@ -136,6 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A33967121AEB90300BF6475 /* ViewController.swift in Sources */,
+				5A33968521AEC0C000BF6475 /* Ingridient.swift in Sources */,
+				5A33968121AEBB4A00BF6475 /* Machine.swift in Sources */,
+				5A33968321AEC09300BF6475 /* Drink.swift in Sources */,
 				5A33966F21AEB90300BF6475 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
