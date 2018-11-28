@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class Machine: NSObject {
     private var products = Dictionary<Ingridient,Int>()
     private var cookBook = Dictionary<Drink,Dictionary<Ingridient,Int>>()
